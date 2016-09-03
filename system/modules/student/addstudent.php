@@ -159,7 +159,7 @@ xmlhttp.send();
     <td><input type="text" name="s_contact_no2" id="s_contact_no2" /></td>
    <td>Gender</td>
     <td>
-   <input type="radio" name="s_gender" id="m" value="Male" />Male
+   <input type="radio" name="s_gender" id="m" value="Male" checked/>Male
    <input type="radio" name="s_gender" id="f" value="Female" />Female</td>
  </tr>
  

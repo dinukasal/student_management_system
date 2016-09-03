@@ -73,7 +73,7 @@ $p_id=0;
 
 		//var_dump($_POST);
 
-		//var_dump($_SESSION);
+		var_dump($_SESSION);
 
 	// insert into students table
 
@@ -90,7 +90,8 @@ $p_id=0;
 		$result1=mysqli_query($con,$sql);
 		$s_id=mysqli_insert_id($con);//lastid
 
-		if($result1 && count($_FILES)>0){
+		if($result1 && count($_SESSION['files_st'])>0){
+			$_FILES=$_SESSION['files_st'];
 			if($_FILES['s_photo'] ['name'] !=""){//if image is there
 			  $tmp=$_FILES['s_photo'] ['tmp_name'] ;
 			  $newimage=$s_id."_".$_FILES['s_photo'] ['name'] ;//uniquly store data
@@ -175,7 +176,7 @@ $p_id=0;
 
 		
 	
-	header("Location:student.php?msg=$msg");
+	//header("Location:student.php?msg=$msg");
 
 
 

@@ -41,7 +41,7 @@
 
     </header>
     <div class="row">
-                <div class="col-lg-6" align="center">
+                <div class="col-lg-6" align="right">
                 <img src="school photos/banner.png"height="100px" width="500px"   />
                 </div>
                 <div class="col-lg-6">

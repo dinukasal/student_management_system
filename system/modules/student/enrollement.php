@@ -3,6 +3,7 @@ if(!isset($_SESSION)){
 	session_start();
 }
 
+$_SESSION['files_p']=$_FILES;
 
 if($_SESSION['st_id']==""){// To resrict if you are not login  as a user
 	$msg="Please Logn to the system";
@@ -31,7 +32,7 @@ $resultc=mysqli_query($con,$sqlc);
 $sqlg="SELECT * FROM grade";
 $resultg=mysqli_query($con,$sqlg);
 
-var_dump($_POST);
+//var_dump($_POST);
 
 $_SESSION['p_fname']=$_POST['p_fname'];
 $_SESSION['p_lname']=$_POST['p_lname'];

@@ -3,6 +3,8 @@ if(!isset($_SESSION)){
 	session_start();
 }
 
+$_SESSION['files_st']=$_FILES;
+
 $_SESSION['s_fname']=$_POST['s_fname']; 
 $_SESSION['s_lname']=$_POST['s_lname']; 
 $_SESSION['s_address1']=$_POST['s_address1'];
@@ -35,7 +37,7 @@ include("../../common/dbconnection.php");
 $sql="SELECT * FROM parent";
 $result=mysqli_query($con,$sql);//To execute query
 
-var_dump($_POST);
+//var_dump($_POST);
 
 
 ?>
@@ -200,12 +202,10 @@ xmlhttp.send();
     <td><input type="text" name="p_email" id="p_email" /></td>
    <td>Gender</td>
     <td>
-   <input type="radio" name="st_gender" id="m" value="Male" />Male
+   <input type="radio" name="st_gender" id="m" value="Male" checked/>Male
    <input type="radio" name="st_gender" id="f" value="Female" />Female</td>
 
  </tr>
- 
-
 
   
   <tr>

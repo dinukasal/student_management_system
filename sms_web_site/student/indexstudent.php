@@ -8,7 +8,7 @@
 
 
 
-<title>Student Management System-login</title>
+<title>Student Management System-student login</title>
 </head>
 
 <body>
@@ -56,7 +56,7 @@
     
   </div>
   
-     <p align="center"><img src="../../images/homeicon.png" width="40px" height="40px"></p> 
+     <p align="center"><a href="../index.php"><img src="../school photos/homeicon.png" width="40px" height="40px"></a></p> 
     
     <div id="footer">
     <p  class="foot" align="center"> &copy;Royal High School <br/> All rights reserved </p>

@@ -4,7 +4,7 @@ if(!isset($_SESSION)){
 }
 
 $s_uname=$_POST['s_uname'];// get data
-$s_password=$_POST['s_password'];// get data and encrypted by SHA1
+$s_password=$_POST['s_password'];// get data 
  
 //to include dbconnection
 include("../../system/common/dbconnection.php");
@@ -21,7 +21,7 @@ if($nor==1){
 	header("Location:studentportal.php");
 }else{
 	$msg="Invalid Username or Password!!!";
-	header("Location:index.php?msg=$msg");//Passing through URL
+	header("Location:indexstudent.php?msg=$msg");//Passing through URL
 }
 
 

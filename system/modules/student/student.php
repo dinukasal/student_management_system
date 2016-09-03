@@ -17,7 +17,7 @@ if(!isset($_SESSION)){
 }
 if($_SESSION['st_id']==""){// To resrict if you are not login  as a user
 	$msg="Please Login to the system";
-	header("Location:../login/index.php?msg=$msg");
+	//header("Location:../login/index.php?msg=$msg");
 	exit();
 }
 

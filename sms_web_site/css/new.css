@@ -42,24 +42,6 @@ header.carousel .fill {
     font-size: 100px;
 }
 
-/* Pricing Page Styles */
-
-.price {
-    display: block;
-    font-size: 50px;
-    line-height: 50px;
-}
-
-.price sup {
-    top: -20px;
-    left: 2px;
-    font-size: 20px;
-}
-
-.period {
-    display: block;
-    font-style: italic;
-}
 	
 .media {
 	background-color:#FFC;
@@ -71,6 +53,8 @@ header.carousel .fill {
 
 footer {
     margin: 50px 0;
+	background-color:#480024;
+	color:#FFF;
 }
 
 
@@ -92,3 +76,36 @@ footer {
         height: 70%;
     }
 }
+
+
+
+
+a.a1:link{
+	color:#000;
+	
+}
+
+a.a1:visited{
+	color:#300;
+}
+a.a1:hover{
+	color:#F00;
+}
+a.a1:active{
+	color:#000;
+}
+
+div#newnavi{
+	height:25px;
+	background-color:#EED546;
+	text-align:right;
+	color:#800000;
+	padding-right:30px;
+	padding-top:5px;
+}
+
+div#newheader{
+	height:25px;
+	background-color:#480024;
+}
+
