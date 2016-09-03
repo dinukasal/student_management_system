@@ -121,12 +121,12 @@ $row = mysqli_fetch_assoc($results);
 
  <tr ><td colspan="2" align="center">
      <?php
- $image='images.png'; 
- if($row['photo'] !=""){
-	 $image=$row['photo'];
- }
+       $image='images.png'; 
+       if($row['photo'] !=""){
+      	 $image=$row['photo'];
+       }
  ?>
- <img src="photo/<?php echo $image; ?>" width="150" height="150"  /></td>
+ <img src="../../system/modules/student/photo/<?php echo $image; ?>" width="150" height="150"  /></td>
  </tr>
 
  
