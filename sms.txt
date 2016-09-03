@@ -1,0 +1,597 @@
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Aug 26, 2016 at 03:07 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `sms`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `class`
+--
+
+CREATE TABLE IF NOT EXISTS `class` (
+  `cl_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cl_name` varchar(75) NOT NULL,
+  `cl_location` varchar(225) NOT NULL,
+  `cl_teacher` varchar(225) NOT NULL,
+  `no_of_students` int(11) NOT NULL,
+  `cl_description` varchar(225) DEFAULT NULL,
+  `cl_status` varchar(45) DEFAULT NULL,
+  `gr_id` int(11) NOT NULL,
+  PRIMARY KEY (`cl_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
+
+--
+-- Dumping data for table `class`
+--
+
+INSERT INTO `class` (`cl_id`, `cl_name`, `cl_location`, `cl_teacher`, `no_of_students`, `cl_description`, `cl_status`, `gr_id`) VALUES
+(1, 'A', 'Block O-A-1', 'Ms.Jayani Samarakoon', 20, 'Age limit is 5-6 years old.', 'Active', 1),
+(3, 'A', 'Block O-A-4', 'Ms.Nirosha Abepitiya', 20, 'Age limit is 5-6 years old.', 'Active', 2),
+(4, 'B', 'Block P-A-4', 'Ms.Farha Nuzrath', 20, ' Age limit is 7-8 years old.', 'Active', 2),
+(5, 'A', 'Block O-A-7', 'Ms.Tharanga Perera', 25, ' Age limit is 7-8 years old.', 'Deactive', 3),
+(6, 'B', 'Block P-A-7', 'Ms.Nishadi  Nanayakkara', 25, ' Age limit is 8-9 years old.', 'Active', 3),
+(7, 'A', 'Block O-B-1', 'Ms.Chamalee Wasala', 25, ' Age limit is 8-9 years old.', 'Active', 4),
+(8, 'B', 'Block P-B-1', 'Ms.Amila Perera', 25, ' Age limit is 9-10 years old.', 'Active', 4),
+(9, 'A', 'Block O-B-4', 'NMs.Lakmini Subasighe', 25, ' Age limit is 9-10years old.', 'Deactive', 5),
+(10, 'B', 'Block P-B-4', 'Ms.Chamalee Herath', 25, ' Age limit is 10-11 years old.', 'Active', 5),
+(11, 'A', 'Block O-B-7', 'Ms.Tania Blackett', 25, ' Age limit is 10-11 years old.', 'Active', 6),
+(12, 'B', 'Block P-B-7', 'Ms.Suharda Peris', 25, ' Age limit is 11-12 years old.', 'Active', 6),
+(13, 'A', 'Block O-C-1', 'Ms.Dilshara Athapattu', 25, 'Age limit is 5-6 years old.', 'Active', 7),
+(14, 'B', 'Block P-C-1', 'Ms.Subha Senevirathna', 25, ' Age limit is 12-13 years old.', 'Active', 7),
+(15, 'A', 'Block O-C-4', 'Ms.Lakshika Siriwardhahna', 30, ' Age limit is 12-13 years old.', 'Active', 8),
+(16, 'B', 'Block P-C-4', 'Mr.Rislan shanon', 25, ' Age limit is 13-14 years old.', 'Active', 8),
+(17, 'A', 'Block O-C-7', 'Ms.Kethaki De Silva', 25, ' Age limit is 13-14 years old.', 'Active', 9),
+(18, 'B', 'Block P-C-7', 'Ms.Rasanjalee Perera', 25, ' Age limit is 14-15 years old.', 'Active', 9),
+(19, 'A', 'Block O-D-1', 'Ms.Achini Marasigha', 25, ' Age limit is 14-15 years old.', 'Active', 10),
+(20, 'B', 'Block P-C-10', 'Ms.Samudika Weththasighe', 25, ' Age limit is 15-16 years old.', 'Active', 10),
+(21, 'A', 'Block O-D-4', 'Mr.Thushara Trevin', 25, ' Age limit is 15-16 years old.', 'Active', 11),
+(22, 'A', 'Block O-D-7', 'Ms.Nelum Wijesekara', 25, ' Age limit is 16-17 years old.', 'Active', 12),
+(23, 'B', 'Block O-D-8', 'Ms.Sureka Galapaththi', 25, ' Age limit is 16-17 years old.', 'Active', 12),
+(24, 'C', 'Block O-D-9', 'Mr.Prasad Munasigha', 25, ' Age limit is 16-17 years old.', 'Active', 12),
+(25, 'A', 'Block O-D-10', 'Ms.Oshadi Managoda', 25, ' Age limit is 17-18 years old.', 'Active', 13),
+(26, 'B', 'Block O-D-11', 'Mr.Bandusena', 25, ' Age limit is 17-18 years old.', 'Active', 13),
+(27, 'C', 'Block O-D-12', 'Ms.Thilini Jayaweera', 25, ' Age limit is 17-18 years old.', 'Active', 13);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `curriculum`
+--
+
+CREATE TABLE IF NOT EXISTS `curriculum` (
+  `cur_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cur_name` varchar(45) NOT NULL,
+  `gr_start` int(2) NOT NULL,
+  `gr_end` int(2) NOT NULL,
+  `cur_description` varchar(2000) DEFAULT NULL,
+  `cur_status` varchar(45) NOT NULL,
+  PRIMARY KEY (`cur_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `curriculum`
+--
+
+INSERT INTO `curriculum` (`cur_id`, `cur_name`, `gr_start`, `gr_end`, `cur_description`, `cur_status`) VALUES
+(1, 'National ', 1, 13, 'The National curriculum is based on Sri Lankan national curriculum.It is divided into five parts as Primary, Junior Secondary, Senior Secondary, Collegiate and Tertiary.  Primary education lasts for 5 to 6 years (Grade 1-5), Junior/Secondary lasts for 4 years (Grade 6-9), Senior Secondary lasts for 2 years (Grade 10-11) in preparation for the GCE O/Levels. Students must pass GCE O/Levels to enter the collegiate level and study for another 2 years (Grades 12-13) to sit for GCE A/Levels which is the university entrance examination. It is optional for students to sit the scholarship examination during the final year of the Primary School (Grade 5) and based on the marks of this extremely competitive examination the students may get an opportunity to get transferred to a prominent national school.', 'Active'),
+(2, 'Cambridge', 1, 10, 'Cambridge curriculum offers routes learners can follow from post Primary Stage through to University entrance.Cambridge Primary gives schools a curriculum framework to develop English, Mathematics and Science skills, knowledge and understanding in younger learners and provides guidance for curriculum development and classroom teaching and learning enabling teachers to assess children''s learning. Cambridge Secondary 1 provides a seamless progression from Cambridge Primary to develop learners'' skills and confidence in English, Mathematics and Science and offers a curriculum framework for educational success for learners, typically 11-14 year olds.Cambridge Secondary 2 is a popular curriculum for 14-16 year olds leading to globally recognised Cambridge IGCSE and O/Level qualifications which provide excellent preparation for Cambridge Advanced Stage including Cambridge International AS and A/Levels and incorporate the best in international education for learners at this level. Cambridge IGCSE encourages learner-centred and inquiry-based approaches to learning. Cambridge International AS and A/Levels are internationally benchmarked qualifications providing excellent preparation for University education. They are part of the Cambridge Advanced Stage. ', 'Active'),
+(3, 'Edexcel', 1, 10, 'Presently we are not conducting the  Edexcel Curriculum.', 'Deactive');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `district`
+--
+
+CREATE TABLE IF NOT EXISTS `district` (
+  `district_id` int(11) NOT NULL AUTO_INCREMENT,
+  `district_name` varchar(45) NOT NULL,
+  `province_id` int(11) NOT NULL,
+  PRIMARY KEY (`district_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `district`
+--
+
+INSERT INTO `district` (`district_id`, `district_name`, `province_id`) VALUES
+(1, 'Colombo', 1),
+(2, 'Gampaha', 1),
+(3, 'Kaluthara', 1),
+(4, 'Rathnapura', 2),
+(5, 'Galle', 3),
+(6, 'Mathara', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `exam`
+--
+
+CREATE TABLE IF NOT EXISTS `exam` (
+  `ex_id` int(11) NOT NULL,
+  `ex_title` varchar(45) NOT NULL,
+  `ex_desription` varchar(45) DEFAULT NULL,
+  `class_cl_id` int(11) NOT NULL,
+  PRIMARY KEY (`ex_id`,`class_cl_id`),
+  KEY `fk_exam_class1` (`class_cl_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `exam`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `exam_result`
+--
+
+CREATE TABLE IF NOT EXISTS `exam_result` (
+  `er_id` int(11) NOT NULL,
+  `marks` varchar(45) DEFAULT NULL,
+  `er_status` varchar(45) DEFAULT NULL,
+  `class_cl_id` int(11) NOT NULL,
+  `exam_ex_id` int(11) NOT NULL,
+  `subject_sub_id` int(11) NOT NULL,
+  PRIMARY KEY (`er_id`,`class_cl_id`,`exam_ex_id`,`subject_sub_id`),
+  KEY `fk_exam_result_class1` (`class_cl_id`),
+  KEY `fk_exam_result_exam1` (`exam_ex_id`),
+  KEY `fk_exam_result_subject1` (`subject_sub_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `exam_result`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `exam_schedule`
+--
+
+CREATE TABLE IF NOT EXISTS `exam_schedule` (
+  `es_id` int(11) NOT NULL AUTO_INCREMENT,
+  `es_date` date NOT NULL,
+  `es_time` time NOT NULL,
+  `es_hall_no` int(11) DEFAULT NULL,
+  `exam_ex_id` int(11) NOT NULL,
+  `subject_sub_id` int(11) NOT NULL,
+  PRIMARY KEY (`es_id`,`exam_ex_id`,`subject_sub_id`),
+  KEY `fk_exam_scheduling_exam1` (`exam_ex_id`),
+  KEY `fk_exam_scheduling_subject1` (`subject_sub_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `exam_schedule`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `grade`
+--
+
+CREATE TABLE IF NOT EXISTS `grade` (
+  `gr_id` int(10) NOT NULL AUTO_INCREMENT,
+  `gr_name` int(75) NOT NULL,
+  `gr_description` varchar(225) NOT NULL,
+  `gr_status` varchar(225) NOT NULL,
+  PRIMARY KEY (`gr_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+
+--
+-- Dumping data for table `grade`
+--
+
+INSERT INTO `grade` (`gr_id`, `gr_name`, `gr_description`, `gr_status`) VALUES
+(1, 1, 'Age limit is 5-6 years old.', 'Active'),
+(2, 2, 'Age limit is 6-7 years old.', 'Active'),
+(3, 3, 'Age limit is 7-8 years old.', 'Active'),
+(4, 4, 'Age limit is 8-9 years old.', 'Active'),
+(5, 5, 'Age limit is 9-10 years old.	', 'Active'),
+(6, 6, 'Age limit is 10-11 years old.', 'Active'),
+(7, 7, 'Age limit is 11-12 years old.', 'Active'),
+(8, 8, 'Age limit is 12-13 years old.', 'Active'),
+(9, 9, 'Age limit is 13-14 years old.	', 'Active'),
+(10, 10, 'Age limit is 14-15 years old.', 'Active'),
+(11, 11, 'Age limit is 15-16 years old.	', 'Active'),
+(12, 12, 'Age limit is 16-17 years old.', 'Active'),
+(13, 13, 'Age limit is 17-18 years old.', 'Deactive');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `grade_curriculum`
+--
+
+CREATE TABLE IF NOT EXISTS `grade_curriculum` (
+  `gc_id` int(11) NOT NULL AUTO_INCREMENT,
+  `gr_id` int(11) NOT NULL,
+  `cur_id` int(11) NOT NULL,
+  PRIMARY KEY (`gc_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+
+--
+-- Dumping data for table `grade_curriculum`
+--
+
+INSERT INTO `grade_curriculum` (`gc_id`, `gr_id`, `cur_id`) VALUES
+(1, 1, 1),
+(2, 2, 1),
+(3, 3, 1),
+(4, 4, 1),
+(5, 5, 1),
+(6, 6, 1),
+(7, 7, 1),
+(8, 8, 1),
+(9, 9, 1),
+(10, 10, 1),
+(11, 11, 1),
+(12, 12, 1),
+(13, 13, 1),
+(14, 1, 2),
+(15, 2, 2),
+(16, 3, 2),
+(17, 4, 2),
+(18, 5, 2),
+(19, 6, 2),
+(20, 7, 2),
+(21, 8, 2),
+(22, 9, 2),
+(23, 10, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `parent`
+--
+
+CREATE TABLE IF NOT EXISTS `parent` (
+  `p_id` int(11) NOT NULL AUTO_INCREMENT,
+  `p_title` varchar(45) DEFAULT NULL,
+  `reg_no` varchar(45) DEFAULT NULL,
+  `p_fname` varchar(45) NOT NULL,
+  `p_lname` varchar(75) NOT NULL,
+  `p_password` varchar(45) NOT NULL,
+  `p_gender` varchar(225) NOT NULL,
+  `p_relationship` varchar(45) NOT NULL,
+  `p_NIC` varchar(11) NOT NULL,
+  `p_address1` varchar(45) DEFAULT NULL,
+  `p_address2` varchar(45) DEFAULT NULL,
+  `p_address3` varchar(45) DEFAULT NULL,
+  `p_contact_no1` int(11) NOT NULL,
+  `p_contact_no2` int(11) DEFAULT NULL,
+  `p_email` varchar(45) NOT NULL,
+  `p_satus` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`p_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `parent`
+--
+
+INSERT INTO `parent` (`p_id`, `p_title`, `reg_no`, `p_fname`, `p_lname`, `p_password`, `p_gender`, `p_relationship`, `p_NIC`, `p_address1`, `p_address2`, `p_address3`, `p_contact_no1`, `p_contact_no2`, `p_email`, `p_satus`) VALUES
+(2, 'Mr', '002', 'Mabulage', 'Wimalarathne', '', '', '', '', 'No 363/A', 'Cross Road', 'Malabe', 775634234, 112654326, 'wimal@gmail.com', 'Active'),
+(3, 'MR', 'reg_no', 'Mabulage', 'Wimalarathne', '', '', '', '', 'No 363/A', 'Cross Road', 'Malabe', 0, 0, 'JKL./', 'Active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payment`
+--
+
+CREATE TABLE IF NOT EXISTS `payment` (
+  `pay_id` int(11) NOT NULL,
+  `pay_title` varchar(45) DEFAULT NULL,
+  `pay_amount` varchar(45) DEFAULT NULL,
+  `paid_amount` int(11) NOT NULL,
+  `paid_date` date NOT NULL,
+  `pay_description` varchar(225) DEFAULT NULL,
+  PRIMARY KEY (`pay_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `payment`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payment_structure`
+--
+
+CREATE TABLE IF NOT EXISTS `payment_structure` (
+  `ps_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ps_amount` int(11) NOT NULL,
+  `ps_duedate` date NOT NULL,
+  `ps_description` varchar(225) NOT NULL,
+  `ps_status` text NOT NULL,
+  `ps` int(11) NOT NULL,
+  PRIMARY KEY (`ps_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `payment_structure`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `province`
+--
+
+CREATE TABLE IF NOT EXISTS `province` (
+  `province_id` int(11) NOT NULL AUTO_INCREMENT,
+  `province_name` varchar(45) NOT NULL,
+  PRIMARY KEY (`province_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `province`
+--
+
+INSERT INTO `province` (`province_id`, `province_name`) VALUES
+(1, 'Western'),
+(2, 'Sabaragamuwa'),
+(3, 'Southern'),
+(4, 'North Western');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `register_class`
+--
+
+CREATE TABLE IF NOT EXISTS `register_class` (
+  `reg_no` int(11) NOT NULL,
+  `cl_id` int(11) NOT NULL,
+  `year` year(4) NOT NULL,
+  `rc_status` varchar(225) NOT NULL,
+  PRIMARY KEY (`reg_no`,`cl_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `register_class`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registration`
+--
+
+CREATE TABLE IF NOT EXISTS `registration` (
+  `reg_no` int(11) NOT NULL AUTO_INCREMENT,
+  `reg_date` date NOT NULL,
+  `academic_year` year(4) NOT NULL,
+  `reg_status` varchar(45) DEFAULT NULL,
+  `s_id` int(11) NOT NULL,
+  PRIMARY KEY (`reg_no`,`s_id`),
+  KEY `fk_registration_student1` (`s_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=big5 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `registration`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `section`
+--
+
+CREATE TABLE IF NOT EXISTS `section` (
+  `sec_id` int(11) NOT NULL AUTO_INCREMENT,
+  `sec_name` varchar(45) NOT NULL,
+  PRIMARY KEY (`sec_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `section`
+--
+
+INSERT INTO `section` (`sec_id`, `sec_name`) VALUES
+(1, 'Primary'),
+(2, 'Junior Secondary'),
+(3, 'Senior Secondary'),
+(4, 'Collegiate');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff`
+--
+
+CREATE TABLE IF NOT EXISTS `staff` (
+  `st_id` int(11) NOT NULL AUTO_INCREMENT,
+  `st_title` varchar(5) NOT NULL,
+  `st_fname` varchar(75) NOT NULL,
+  `st_lname` varchar(225) NOT NULL,
+  `photo` text NOT NULL,
+  `st_password` text NOT NULL,
+  `st_address1` varchar(45) DEFAULT NULL,
+  `st_address2` varchar(45) DEFAULT NULL,
+  `st_address3` varchar(45) DEFAULT NULL,
+  `st_contact_no1` int(11) NOT NULL,
+  `st_contact_no2` int(11) DEFAULT NULL,
+  `st_email` varchar(45) DEFAULT NULL,
+  `st_nic` text NOT NULL,
+  `st_dob` date NOT NULL,
+  `st_gender` varchar(45) NOT NULL,
+  `st_city` varchar(45) NOT NULL,
+  `district_id` int(45) NOT NULL,
+  `st_status` varchar(45) DEFAULT NULL,
+  `st_r_id` int(11) NOT NULL,
+  PRIMARY KEY (`st_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `staff`
+--
+
+INSERT INTO `staff` (`st_id`, `st_title`, `st_fname`, `st_lname`, `photo`, `st_password`, `st_address1`, `st_address2`, `st_address3`, `st_contact_no1`, `st_contact_no2`, `st_email`, `st_nic`, `st_dob`, `st_gender`, `st_city`, `district_id`, `st_status`, `st_r_id`) VALUES
+(1, 'Ms', 'Sameera', 'Madushani', '', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'No 363/a', 'Main Street', 'Hanwella', 775365342, 362254058, 'sameera@gmail.com', '645583645v', '1990-01-31', 'Female', 'Hanwella', 1, 'Active', 1),
+(2, 'MRS', 'Stella', 'Marapana', '_images (4).jpg', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Maharagama', 'Maharagama', 'Maharagama', 779824367, 112846678, 'stella@gmail.com', '765374987v', '1976-11-20', 'Female', 'Maharagama', 1, 'Active', 2),
+(3, 'Mrs', 'Sandya', 'Jayarathne', '', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'No 85', 'Kirula road', 'Piliyandala', 775365342, 115746438, 'sandya@gmail.com', '715549836v', '1971-07-14', 'Female', 'Piliyadala', 1, 'Deactive', 3),
+(4, 'Ms', 'Nelum', 'Wijesekara', '', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'No 293', 'Pannipitiya', 'Kottawa', 779824366, 112846623, 'nelum@gmail.com', '804635243v', '1980-05-18', 'Female', 'Kottawa', 1, 'Active', 4),
+(5, 'Mr', 'Thushara', 'Trevin', '', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'No 674', 'Cross Road', 'Malapalla', 112274542, 772637473, 'thushara@gmail.com', '805313754v', '1980-01-31', 'Male', 'Kottawa', 1, 'Active', 5),
+(6, 'MS', 'Chamaleeeee', 'Herath', '_images (1).jpg', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Nugegoda', 'Nugegoda', 'Nugegoda', 775365342, 112846678, 'chamalee@gmail.com', '698989898v', '1969-06-17', 'Female', 'Nugegoda', 1, 'Active', 4),
+(7, 'MS', 'Adhithi', 'Bideesha', '_images (2).jpg', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Pothuarawa', 'Malabe', 'Malabe', 11256767, 785678765, 'adhi@gmail.com', '901212121v', '1990-07-05', 'Female', 'dd', 5, 'Active', 5),
+(10, 'MS', 'Dilini', 'Fonseka', '10_109956.gif', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'No 183', 'ddddddddd', 'aaaaaaaaa', 1111111111, 1111111111, 'adhi@gmail.com', '901212199v', '1990-08-03', 'Female', 's', 3, 'Active', 4),
+(12, 'MR', 'Kushan', 'Perera', '_download (3).jpg', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'No: 78/A', 'Delkada', 'Nugegoda', 776765456, 785678765, 'kushan@gmail.com', '770512510v', '1977-12-31', 'Male', 'Delkada', 1, 'Active', 5),
+(13, 'MR', 'Shamini ', 'Anuradha', '_download (2).jpg', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'No: 990/7', 'Library road', 'Kiribathgoda', 776765456, 785678765, 'ahamini@gmail.com', '901212121v', '1990-12-31', 'Female', 'Kiribathgoda', 1, 'Active', 4),
+(15, 'MR', 'Dushankjljj', 'jjjjjjjjjjjjjj', '15_download.jpg', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'sss', 'sss', 'sss', 1234567890, 1111111111, 'adhi@gmail.com', '901212121v', '1990-08-01', 'Female', 'dd', 3, 'Active', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_role`
+--
+
+CREATE TABLE IF NOT EXISTS `staff_role` (
+  `st_r_id` int(11) NOT NULL AUTO_INCREMENT,
+  `st_r_name` varchar(45) NOT NULL,
+  `st_r_description` varchar(225) DEFAULT NULL,
+  `st_r_status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`st_r_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `staff_role`
+--
+
+INSERT INTO `staff_role` (`st_r_id`, `st_r_name`, `st_r_description`, `st_r_status`) VALUES
+(1, 'Admin', 'Admin is the author of the system.', 'Active'),
+(2, 'Principal', 'Principal is the heads of the school .', 'Active'),
+(3, 'Vice Principal', 'Vice Principals are the heads of school divisions.', 'Active'),
+(4, 'Sectional head', 'Sectional heads are the heads of each grade of curriculum', 'Active'),
+(5, 'Teacher', 'Teachers are the academic staff who teach subject.', 'Active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student`
+--
+
+CREATE TABLE IF NOT EXISTS `student` (
+  `s_id` int(11) NOT NULL AUTO_INCREMENT,
+  `s_fname` varchar(75) NOT NULL,
+  `s_lname` varchar(225) NOT NULL,
+  `photo` text NOT NULL,
+  `s_uname` varchar(45) NOT NULL,
+  `s_password` text NOT NULL,
+  `s_address1` varchar(45) DEFAULT NULL,
+  `s_address2` varchar(45) DEFAULT NULL,
+  `s_address3` varchar(45) DEFAULT NULL,
+  `s_contact_no1` int(11) DEFAULT NULL,
+  `s_contact_no2` int(11) DEFAULT NULL,
+  `s_email` varchar(45) DEFAULT NULL,
+  `s_NIC` varchar(45) DEFAULT NULL,
+  `s_DoB` date NOT NULL,
+  `s_gender` varchar(45) NOT NULL,
+  `s_status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`s_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`s_id`, `s_fname`, `s_lname`, `photo`, `s_uname`, `s_password`, `s_address1`, `s_address2`, `s_address3`, `s_contact_no1`, `s_contact_no2`, `s_email`, `s_NIC`, `s_DoB`, `s_gender`, `s_status`) VALUES
+(3, 'Shenaya', 'Perera', '3_222780,xcitefun-doll-2.jpg', 'shenaya', '1234', 'No 272/6', 'Piliyandala Rd', 'Maharagama', 725678675, 112287651, 'shenaya@gmail.com', '982345465v', '1998-06-15', 'Female', 'Active'),
+(4, 'Nimindu', 'Lakshika', '4_579952_309788562482099_1674578121_n.jpg', 'nimindu', '1234', 'No 89', 'Lake side', 'Boralasgamuwa', 778976456, 11256765, 'nimindu@yahoo.com', '994534234v', '1999-06-12', 'Male', 'Active'),
+(5, 'Hashini ', 'Bagya', '5_533636_477795888976280_109126409_n.jpg', 'hashini', '1234', 'No 121/2', 'Main Street', 'Homagama', 786567876, 0, 'hashini@gmail.com', '936756754v', '1993-07-12', 'Female', 'Active'),
+(6, 'Bhanu', 'Aduthya', '6_1012221_10200738306677860_1880352744_n.jpg', 'bhanu', '1234', 'No765', 'Imperial side', 'Godagama', 754598765, 0, 'bhanu@gmail.com', '973456543v', '1997-12-08', 'Female', 'Active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subject`
+--
+
+CREATE TABLE IF NOT EXISTS `subject` (
+  `sub_id` int(11) NOT NULL,
+  `sub_code` varchar(11) NOT NULL,
+  `sub_title` varchar(45) NOT NULL,
+  `sub_incharge` varchar(75) NOT NULL,
+  `sub_description` varchar(45) DEFAULT NULL,
+  `sub_status` varchar(45) NOT NULL,
+  `gr_id` int(11) NOT NULL,
+  PRIMARY KEY (`sub_id`,`gr_id`),
+  KEY `fk_subject_class1` (`gr_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `subject`
+--
+
+INSERT INTO `subject` (`sub_id`, `sub_code`, `sub_title`, `sub_incharge`, `sub_description`, `sub_status`, `gr_id`) VALUES
+(1, 'n11', 'Mathematics', 'Ms.Farha Subana', 'Compulsory', 'Active', 1),
+(2, 'n12', 'Science', 'Ms.ssssssssssss', 'Compulsory', 'Active', 1),
+(3, 'n13', 'ENV', 'Ms.ssssssssssss', 'Compulsory', 'Active', 1),
+(4, 'n14', 'Science', 'Ms.ssssssssssss', 'Compulsory', 'Active', 1),
+(5, 'n15', 'Art', 'Ms.ssssssssssss', 'Compulsory', 'Active', 1),
+(6, 'n16', 'Music', 'Ms.ssssssssssss', 'Compulsory', 'Active', 1),
+(7, 'n17', 'Dancing', 'Ms.ssssssssssss', 'Compulsory', 'Active ', 1),
+(8, 'n18', 'ICT', 'Ms.ssssssssssss', 'Compulsory', 'Active', 1),
+(9, 'n21', 'Maths', 'Ms.ssssssssssss', 'Compulsory', 'Active', 2),
+(10, 'n22', 'ENV', 'Ms.ssssssssssss', 'Compulsory', 'Active', 2),
+(11, 'n23', 'Science', 'Ms.ssssssssssss', 'Compulsory', 'Active', 2),
+(12, 'n24', 'Music', 'Ms.ssssssssssss', 'Compulsory', 'Active ', 2),
+(13, 'n25', 'Dancing', 'Ms.ssssssssssss', 'Compulsory', 'Active', 2),
+(14, 'n26', 'Art', 'Ms.ssssssssssss', 'Compulsory', 'Active', 2),
+(15, 'n27', 'ICT', 'Ms.ssssssssssss', 'Compulsory', 'Active', 2),
+(16, 'c11', 'Mathematics', 'Ms.ssssssssssss', 'Compulsory', 'Active', 1),
+(17, 'c12', 'English', 'Ms.ssssssssssss', 'Compulsory', 'Active', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `time_table`
+--
+
+CREATE TABLE IF NOT EXISTS `time_table` (
+  `tt_id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `term` int(11) NOT NULL,
+  `academic_year` year(4) NOT NULL,
+  `tt_status` varchar(45) NOT NULL,
+  `sub_id` int(11) NOT NULL,
+  `cl_id` int(11) NOT NULL,
+  PRIMARY KEY (`tt_id`,`sub_id`,`cl_id`),
+  KEY `fk_time_table_subject1` (`sub_id`),
+  KEY `fk_time_table_class1` (`cl_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `time_table`
+--
+
+INSERT INTO `time_table` (`tt_id`, `date`, `time`, `term`, `academic_year`, `tt_status`, `sub_id`, `cl_id`) VALUES
+(1, '2016-07-11', '00:00:07', 1, 2016, 'Active', 1, 1);

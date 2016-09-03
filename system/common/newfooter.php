@@ -1,0 +1,1 @@
+<div class="foo" >©Royal High School<br/> All Rights Reserved</div>

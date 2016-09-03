@@ -1,0 +1,113 @@
+
+/* Home Page Carousel */
+
+header.carousel {
+    height: 50%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+body{
+	margin::0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+div#main{
+	width:100%;
+	}
+	
+div#newheader{
+	height:75px;
+	background-color:#300;
+}
+
+.hea{
+	color:#FC0;
+	font:Arial, Helvetica, sans-serif;
+	font-size:38px;
+	text-transform:uppercase;
+	font-weight:bold;
+	text-align:center;
+	padding-top:25px;
+	padding-bottom:25px:
+}
+
+div#newnavi{
+	height:25px;
+	background-color:#EED546;
+	text-align:right;
+	color:#800000;
+	padding-right:30px;
+	padding-top:5px;
+}
+
+div#newcontent{
+	min-height:500px;
+	color:#000;
+	font:Arial, Helvetica, sans-serif;
+}
+
+div#row{
+   font:Arial, Helvetica, sans-serif;
+   color:#F00;	
+}
+
+div#bar{
+   font:Arial, Helvetica, sans-serif;
+   color:#005279;
+}
+
+div#contentbar{
+	background-color:#005279;
+}
+
+div#newfooter{
+	height:75px;
+	color:#400000;
+	
+}
+
+
+.table-area{
+	color:#000;
+   	
+}
+.foo{
+	color:#FFF;
+	font-size:14px;
+	text-align:center;
+	font-style:italic;
+	background-color:#300;
+}
+
+a.a1:link{
+	color:#000;
+}
+
+a.a1:visited{
+	color:#000;
+}
+a.a1:hover{
+	color:#F00;
+}
+a.a1:active{
+	color:#000;
+}
+th{
+	color:#000;
