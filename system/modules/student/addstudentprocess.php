@@ -73,7 +73,7 @@ $p_id=0;
 
 		//var_dump($_POST);
 
-		var_dump($_SESSION);
+		//var_dump($_SESSION);
 
 	// insert into students table
 
@@ -176,7 +176,7 @@ $p_id=0;
 
 		
 	
-	//header("Location:student.php?msg=$msg");
+	header("Location:student.php?msg=$msg");
 
 
 
