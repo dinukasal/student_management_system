@@ -7,7 +7,7 @@ $s_uname=$_POST['s_uname'];// get data
 $s_password=$_POST['s_password'];// get data and encrypted by SHA1
  
 //to include dbconnection
-include("../../common/dbconnection.php");
+include("../../system/common/dbconnection.php");
 
 $sql="SELECT * FROM student s WHERE s.s_uname='$s_uname' AND s_password='$s_password'";
 
