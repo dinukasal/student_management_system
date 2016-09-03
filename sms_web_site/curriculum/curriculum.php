@@ -95,15 +95,13 @@ $s_lname=$user_info['s_lname'];
   </div> 
   
           
-          
-
-      
-                
+   <br> 
+    <p style="margin-left:2%" >Print: <span class="glyphicon glyphicon-print" onclick="alert('ok')"></span></p>
 
 
     <!-- Page Content -->
     <div class="container">
-                    <h2 class="page-header" align="center" style="color:#D56A00" >Parent Dashboard</h2>
+                    <h2 class="page-header" align="center" style="color:#D56A00" >Subjects</h2>
 
                 
    <table width="80%" align="center">
