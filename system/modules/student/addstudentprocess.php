@@ -90,21 +90,31 @@ $p_id=0;
 		$result1=mysqli_query($con,$sql);
 		$s_id=mysqli_insert_id($con);//lastid
 
-		if($result1 && count($_SESSION['files_st'])>0){
+		//if($result1){
+
+			/*
 			$_FILES=$_SESSION['files_st'];
 			if($_FILES['s_photo'] ['name'] !=""){//if image is there
+
 			  $tmp=$_FILES['s_photo'] ['tmp_name'] ;
 			  $newimage=$s_id."_".$_FILES['s_photo'] ['name'] ;//uniquly store data
 			  $path="photo/".$newimage;//path
-			  copy($tmp,$path);//copy into new path from temp
+			  echo copy($tmp,$path);//copy into new path from temp
+			  echo "photo copied";
 			}else{
 				$newimage="";
 			}
+			*/
 
-			$sqlup="UPDATE student SET photo= '$newimage' WHERE s_id='$s_id'";
+	}
+	if(isset($_SESSION['s_photo'])){
+			$sqlup="UPDATE student SET photo= '".$_SESSION['s_photo']."' WHERE s_id='$s_id'";
+			
+			//var_dump($sqlup);
+
 			mysqli_query($con,$sqlup);//update 
-		
-		}
+	}	
+		//}
 
 			// get s_id from the student table
 			$sql="select s_id from student where s_fname='$s_fname' and s_lname='$s_lname'";
@@ -112,8 +122,8 @@ $p_id=0;
 			$results=mysqli_query($con,$sql);
 
 			$row=mysqli_fetch_assoc($results);
-	}
 	$s_id=$row['s_id'];
+
 
 	// insert data to 	registration
 	global $reg_no;
@@ -128,7 +138,7 @@ $p_id=0;
 		if(count($row)==0){
 			$sql="INSERT INTO registration values('','$date','Active','$s_id')";
 			$results=mysqli_query($con,$sql);
-			var_dump($results)	;
+			//var_dump($results)	;
 
 			$sql="select reg_no from registration WHERE s_id=$s_id";
 

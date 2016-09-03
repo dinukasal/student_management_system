@@ -3,6 +3,16 @@ if(!isset($_SESSION)){
 	session_start();
 }
 
+      if($_FILES['s_photo'] ['name'] !=""){//if image is there
+
+        $tmp=$_FILES['s_photo'] ['tmp_name'] ;
+        //$newimage=$s_id."_".$_FILES['s_photo'] ['name'] ;//uniquly store data
+        $newimage=$_FILES['s_photo'] ['name'] ;//
+        $path="photo/".$newimage;//path
+        copy($tmp,$path);//copy into new path from temp
+        $_SESSION['s_photo']=$newimage;
+      }
+
 $_SESSION['files_st']=$_FILES;
 
 $_SESSION['s_fname']=$_POST['s_fname']; 

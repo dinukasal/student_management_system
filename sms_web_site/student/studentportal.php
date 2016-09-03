@@ -90,7 +90,7 @@ $s_lname=$user_info['s_lname'];
 
               <div id="newnavi">
  <?php echo " You're logged as : ". $s_fname." ".$s_lname;?>(student)
- <a class="a1" href="logout.php">Logout</a>
+ <a class="a1" href="../../system/modules/login/logout.php">Logout</a>
        
   </div> 
   
